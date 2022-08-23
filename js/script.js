@@ -1,26 +1,26 @@
 'use strict';
 
 const rectangle = {
-  width: 5,
-  height: 5,
+  _width: 5,
+  _height: 5,
 
   get perimeter() {
-    return `Периметр равен ${(this.width + this.height) * 2}см`;
+    return `Периметр равен ${(this._width + this._height) * 2}см`;
   },
   get area() {
-    return `Площадь равна ${this.width * this.height}см квадратных`;
+    return `Площадь равна ${this._width * this._height}см квадратных`;
   },
 
-  set rWidth(val) {
-    this.width = val;
+  set Width(val) {
+    this._width = val;
   },
-  set rHeight(val) {
-    this.height = val;
+  set Height(val) {
+    this._height = val;
   },
 };
 
-rectangle.rWidth = 4;
-rectangle.rHeight = 11;
+rectangle.Width = 4;
+rectangle.Height = 11;
 
 console.log(rectangle.perimeter);
 console.log(rectangle.area);
